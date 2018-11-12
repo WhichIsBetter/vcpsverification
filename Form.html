@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VCPS FB Group Verification</title>
+  <base target="_top">
+  <title>VCPS FB Group Verification</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!--
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  media="screen,projection"/>
+-->
+<!--Import bootstrap.css-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style>
+.error {
+  color: RED;
+  border-bottom-color: RED;
+}
+.container {
+  width: 85%;
+}
+</style>
+</head>
+<body>
+  <div id="formDiv" class='container'>
+    <div class='row'>
+      <div class='col-11'>
+      </div>
+    </div>
+    <div class='row'>
+    <div class='col-sm-7 col-11'>
+      <form id="myForm">
+        <!-- Welcome Text-->
+        <div class='row'>
+          <div class='col'>
+            <h3>VCPS FB Group Verification</h3>
+            <h6>Hi,
+              <br><br>Thanks for your application to join the Vision Care Professionals Singapore (VCPS) FB Group.
+              <br><br>We are the largest vision care professional interest group in Singapore.
+              <br><br>All applicants need to be verified before application is approved as this group is <strong>ONLY</strong> open to Members of the Singapore Vision Care Industry and its counterparts.
+              <br><br>Kindly complete the form below for verification please.
+              <br><br>
+            </h6>
+            <!--Which Part Of Industry-->
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col'>
+            <h5>Which part of the industry are you?</h5>
+            <div class='input-field'>
+              <div class="select-wrapper">
+                <select class="industry browser-default" id="industry" name="industry">
+                  <option value="" disabled="" selected="">Choose your option</option>
+                  <option class="industry" docutype="praccert" value="Registered_ECP">Optician or Optometrist registered with OOB</option>
+                  <option class="industry" docutype="namecard" value="NonRegistered_ECP">Optician or Optometrist NOT registered with OOB</option>
+                  <option class="industry" docutype="stdcard" value="Student">Opticianry/Optometry Student/Recent Graduant</option>
+                  <option class="industry" docutype="stdcard" value="RecentORD">Recently ORDed Opticianry/Optometry Student</option>
+                  <option class="industry" docutype="namecard" value="SMC">Ophthalmologist/Other Medical Practioner registered with SMC</option>
+                  <option class="industry" docutype="namecard" value="Academic">Academics (Industry Lecturers/Trainers)</option>
+                  <option class="industry" docutype="namecard" value="Owners_Mgmt">Owners/Management of Optical Practices/Eye Clinics </option>
+                  <option class="industry" docutype="namecard" value="Industry Partners">Sales/Marketers/Liasons of Optical Industry Partners</option>
+                  <option class="industry" docutype="non_industry" value="Others">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label id="file-error" class="error" for="industry"></label>
+          </div>
+          <br>
+        </div>
+      <!--FB Profile Name-->
+      <div class='row VCPS'>
+        <div class='col'>
+          <br><h5>Your FB Profile Name</h5>
+          <img src="https://i.imgur.com/LqH30li.png">
+          <div class='input-field'>
+            <input id="FB_Profile_Name" type="text" name="FB_Profile_Name">
+            <label for="FB_Profile_Name">FB Profile Name - e.g. Char Siew Bao</label>
+          </div>
+          <div>
+            <label id="file-error" class="error" for="FB_Profile_Name"></label>
+          </div>
+        </div>
+      </div>
+      <!--OOB Number-->
+      <!--
+      <div class='divider docutype docu_praccert' id="docu_praccert" style='display:none;'></div>
+    -->
+      <div class='row docutype docu_praccert' id="docu_praccert" style='display:none;'>
+        <div class='col'>
+          <br><h5>OOB Registration Number</h5>
+          <img src="https://i.imgur.com/90eAIuW.jpg">
+          <div class='input-field'>
+            <input id="OOB_Num" type="text" class="validate" name="OOB_Num" >
+            <label for="OOB_Num">Case sensitive. Please enter the exact OOB number. e.g. E1234567C</label>
+          </div>
+          <div>
+            <label id="file-error" class="error" for="OOB_Num"></label>
+          </div>
+        </div>
+      </div>
+    <!--Actual Name-->
+      <div class='row VCPS'>
+        <div class='col'>
+            <br><h5>Your Actual Name</h5>
+            <div class='input-field'>
+              <input id="Actual_Name" type="text" class="validate" name="Actual_Name">
+              <label for="Actual_Name">Your name as stated in your verification document</label>
+            </div>
+            <div>
+              <label id="file-error" class="error" for="Actual_Name"></label>
+            </div>
+          </div>
+        </div>
+      <!--Upload Verification Docu-->
+      <div class='row VCPS'>
+        <div class='col'>
+          <h5>Upload Verification Selfie</h5>
+          <img style="width: 300px;"src="https://i.imgur.com/QkReyTh.jpg">
+          <h6>
+            <span class="docu_text" style='display:none;'>Please upload a <strong>Selfie</strong> of you holding your</span>
+            <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert(Pink/Green Card)</strong></span>
+            <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card (NOT 11B)</strong></span>
+            <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span>
+            <span class="docu_text" style='display:none;'> and ensure that the following details in your <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert</strong></span>
+            <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card</strong></span>
+            <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span> are clear and readable.
+            <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'>
+              <li>Name</li>
+              <li>ID Picture</li>
+              <li>Registration Number</li>
+            </span>
+            <span class="docutype docu_stdcard" id="docu_stdcard" style='display:none;'>
+              <li>Name</li>
+              <li>ID Picture</li>
+              <li>Course</li>
+            </span>
+            <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'>
+              <li>Name</li>
+              <li>Company Name/LOGO</li>
+              <li>Designation/Position</li>
+              <li>Contact Number/Email</li>
+            </span>
+            <br>Please check your picture before sending. <br>Unreadable(too small)/inverted/mirrored text WILL be immediately rejected
+            <br>In the event that you do not have the required document. Kindly contact the Administrator(Details at the bottom).</span>
+          </h6>
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Browse</span>
+                <input id="docu" name="docu" type="file" placeholder="Select a file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path" type="text" name="docu" formnovalidate>
+              </div>
+            </div>
+            <div>
+              <label id="file-error" class="error" for="docu"></label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class='row VCPS'>
+        <div class='col'>
+          <div class="input-field">
+            <button id="submitBtn" type="button" class="btn-large btnSubmit" value="submit" onclick="fileUploadJs()" disabled>
+              <i class="material-icons right">backup</i>Submit</button>
+              <span id="status" style="display: none">
+                <!-- div will be filled with innerHTML after form submission. -->
+                Uploading. Please wait...</span>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!--Contact Admin-->
+          <div class='row'style='display:block;'>
+            <div class='col'>
+              <br><h5>Having a Hard Time? Contact The VCPS Community Manager!</h5><h6>Please feel free to contact <a id="mickaelng" href="https://www.facebook.com/ordico">Mickael Ng</a> via FB Messenger! :) </h6>
+            </div>
+          </div>
+        </form>
+    </div>
+    </div>
+  </div>
+
+    <!-- Add the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Add the minimalize js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Add the jQuery validation library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+    <!-- Validation Scripts-->
+    <script>
+    $(document).ready(function(){
+      $("#myForm").validate({
+        debug: true,
+        rules: {
+          industry:{
+            required: true,
+          },
+          FB_Profile_Name:{
+            required: true,
+          },
+          docu:{
+            required: true,
+            accept: "image/jpeg, image/png, image/gif"
+          },
+          Actual_Name:{
+            required: true,
+          },
+          selfie:{
+            required: true,
+            accept: "image/jpeg, image/png, image/gif"
+          }
+        },
+        messages: {
+          docu: {
+            required: "Please select your file",
+            accept: "Only jpg/jpeg/png/gif files are accepted"
+          },
+          selfie: {
+            required: "Please select your file",
+            accept: "Only jpg/jpeg/png/gif files are accepted"
+          }
+        }
+      });
+      $("#myForm").change(function(){
+        if ($("#myForm").valid()) {
+          $("#submitBtn").prop('disabled', false);
+        } else {
+          $("#submitBtn").prop('disabled', true);
+        };
+      });
+    });
+    </script>
+
+    <!-- Form Element Changes Script -->
+    <script>
+    $(document).ready(function(){
+      $(".industry").change(function(){
+        docu = "docu_"+$(".industry:selected").attr("docutype");
+        // when "others" is selected
+        if (docu == "docu_non_industry") {
+          $(".VCPS").css("display", "none");
+          $(".non_industry").css("display", "block"); // shows non_industry sections
+          $("div[id=docu_praccert]").css("display", "none");
+          $("div[id=docu_praccert]").css("display", "none");// hides OOB_Num
+          $("input[id=OOB_Num]").val("");// sets OOB_Num value as ""
+        }
+        else {
+          if (docu == "docu_praccert"){
+            $("input[id=OOB_Num]").attr("required","required"); //sets OOBNum to 'required'
+            $(".docu_praccert").css("display", "block"); // shows OOB_Num
+          }
+          else if (docu != "docu_praccert") {
+            $("div[id=docu_praccert]").css("display", "none"); // hides OOB_Num
+            $("input[id=OOB_Num]").val("");// sets OOB_Num value as ""
+          }
+          $(".VCPS").css("display", "block"); // displays VCPS components
+          $(".non_industry").css("display", "none");// hides non_industry components
+          $(".docutype").css("display", "none");
+          $("."+docu).css("display", "block");// display required docu
+          $("span[id="+docu+"]").css("display", "inline");// display required docu
+          $(".docu_text").css("display", "inline");// display docu_text
+        };
+      });
+    });
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+
+    </script>
+    <!-- Link Update Script-->
+    <script>
+    $( document ).ready(function() {
+      var isMobile = window.matchMedia("only screen and (max-width: 768px)"); // or 1242px?
+
+      if (isMobile.matches) {
+        $('#mickaelng').attr('href','fb://www.facebook.com/ordico')
+      }
+    });
+    </script>
+    <!-- File Upload Scripts -->
+    <script>
+    function fileUploadJs() {
+      var industry = document.getElementById("industry")[document.getElementById("industry").selectedIndex].value;
+      var FBName = document.getElementById("FB_Profile_Name").value;
+      var OOBNum = document.getElementById("OOB_Num").value;
+      var docu = document.getElementById("docu").files[0];
+      //var selfie = document.getElementById("selfie").value.files[0];
+      var aName = document.getElementById("Actual_Name").value;
+      var fileDate = new Date();
+      fileDate = fileDate.toISOString().slice(0,10).replace(/-/g,""); // formats date to yyyymmdd
+      var timeStamp = new Date();
+      timeStamp = timeStamp.toISOString().slice(0,19).replace("T"," "); // formats date to "2017-12-31 09:21:20" in UTC
+
+      var newFilePrefix = "xxx"; // sets file prefix
+      if (OOBNum === "") {
+        newFilePrefix = fileDate+"-"+FBName+"-"+industry+"-"+aName;
+      } else {
+        newFilePrefix = OOBNum+"-"+fileDate+"-"+FBName+"-"+industry+"-"+aName;
+      }
+
+      var oldDocuName = docu.name;
+      var docuExtension = oldDocuName.slice(oldDocuName.lastIndexOf("."));
+      var newDocuName = newFilePrefix + docuExtension;
+
+      document.getElementById('status').style.display = 'inline'; //Display status
+
+      var reader = new FileReader(); //creates new FileReader()
+      reader.readAsDataURL(docu); //read uploaded file
+
+      //values = ["Timestamp" "FB Name" "Industry"  "OOBNumber" "Actual Name"]
+      var values = [timeStamp, FBName, industry, OOBNum, aName];
+
+      // checks and uploads file
+      reader.onloadend = function(e) {
+        if (e.target.error !== null) {
+          showError("File " + docu.name + " could not be read.");
+          return;
+        } else {
+          google.script.run
+          .withSuccessHandler(updateOutput)
+          .processForm(e.target.result, newDocuName, values);
+        }
+      };
+    }
+
+    // Javascript function called by "submit" button handler,
+    // to show results.
+
+    function updateOutput() {
+      var outputDiv = document.getElementById('status');
+      outputDiv.innerHTML = "File was UPLOADED!";
+      $("#submitBtn").html('<i class="material-icons left">backup</i>file upload success!');
+    };
+
+    function showError(e) {
+      $('#progress').addClass('red-text').html(e);
+    };
+    </script>
+  </body>
+  </html>
