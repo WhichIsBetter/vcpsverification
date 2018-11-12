@@ -45,62 +45,52 @@
               <br><br>Kindly complete the form below for verification please.
               <br><br>
             </h6>
-            <!--Which Part Of Industry-->
           </div>
         </div>
+        <!--Which Part Of Industry-->
         <div class='row'>
           <div class='col'>
-            <h5>Which part of the industry are you?</h5>
-            <div class='input-field'>
-              <div class="select-wrapper">
-                <select class="industry browser-default" id="industry" name="industry">
-                  <option value="" disabled="" selected="">Choose your option</option>
-                  <option class="industry" docutype="praccert" value="Registered_ECP">Optician or Optometrist registered with OOB</option>
-                  <option class="industry" docutype="namecard" value="NonRegistered_ECP">Optician or Optometrist NOT registered with OOB</option>
-                  <option class="industry" docutype="stdcard" value="Student">Opticianry/Optometry Student/Recent Graduant</option>
-                  <option class="industry" docutype="stdcard" value="RecentORD">Recently ORDed Opticianry/Optometry Student</option>
-                  <option class="industry" docutype="namecard" value="SMC">Ophthalmologist/Other Medical Practioner registered with SMC</option>
-                  <option class="industry" docutype="namecard" value="Academic">Academics (Industry Lecturers/Trainers)</option>
-                  <option class="industry" docutype="namecard" value="Owners_Mgmt">Owners/Management of Optical Practices/Eye Clinics </option>
-                  <option class="industry" docutype="namecard" value="Industry Partners">Sales/Marketers/Liasons of Optical Industry Partners</option>
-                  <option class="industry" docutype="non_industry" value="Others">Other</option>
-                </select>
-              </div>
+            <div class="form-group">
+            <label for="industry">Which part of the industry are you?</label>
+              <select class="industry form-control" id="industry" name="industry">
+                <option value="" disabled="" selected="">Choose your option</option>
+                <option class="industry" docutype="praccert" value="Registered_ECP">Optician or Optometrist registered with OOB</option>
+                <option class="industry" docutype="namecard" value="NonRegistered_ECP">Optician or Optometrist NOT registered with OOB</option>
+                <option class="industry" docutype="stdcard" value="Student">Opticianry/Optometry Student/Recent Graduant</option>
+                <option class="industry" docutype="stdcard" value="RecentORD">Recently ORDed Opticianry/Optometry Student</option>
+                <option class="industry" docutype="namecard" value="SMC">Ophthalmologist/Other Medical Practioner registered with SMC</option>
+                <option class="industry" docutype="namecard" value="Academic">Academics (Industry Lecturers/Trainers)</option>
+                <option class="industry" docutype="namecard" value="Owners_Mgmt">Owners/Management of Optical Practices/Eye Clinics </option>
+                <option class="industry" docutype="namecard" value="Industry Partners">Sales/Marketers/Liasons of Optical Industry Partners</option>
+                <option class="industry" docutype="non_industry" value="Others">Other</option>
+              </select>
+              <div class="invalid-feedback">Please select one.</div>
             </div>
           </div>
-          <div>
-            <label id="file-error" class="error" for="industry"></label>
-          </div>
-          <br>
         </div>
       <!--FB Profile Name-->
       <div class='row VCPS'>
         <div class='col'>
-          <br><h5>Your FB Profile Name</h5>
-          <img src="https://i.imgur.com/LqH30li.png">
-          <div class='input-field'>
-            <input id="FB_Profile_Name" type="text" name="FB_Profile_Name">
-            <label for="FB_Profile_Name">FB Profile Name - e.g. Char Siew Bao</label>
+          <div class='form-group'>
+            <label for="FB_Profile_Name">Your FB Profile Name<br><img src="https://i.imgur.com/LqH30li.png"></label>
+            <input id="FB_Profile_Name" type="text" class="form-control" name="FB_Profile_Name" aria-describedby='FB_Profile_Name_HelpText'>
+            <small id='FB_Profile_Name_HelpText' class="form-text text-muted">FB Profile Name - e.g. Char Siew Bao</small>
           </div>
-          <div>
-            <label id="file-error" class="error" for="FB_Profile_Name"></label>
-          </div>
+          <div class="invalid-feedback">Input Required</div>
         </div>
       </div>
       <!--OOB Number-->
       <!--
       <div class='divider docutype docu_praccert' id="docu_praccert" style='display:none;'></div>
-    -->
+      -->
       <div class='row docutype docu_praccert' id="docu_praccert" style='display:none;'>
         <div class='col'>
-          <br><h5>OOB Registration Number</h5>
-          <img src="https://i.imgur.com/90eAIuW.jpg">
-          <div class='input-field'>
-            <input id="OOB_Num" type="text" class="validate" name="OOB_Num" >
-            <label for="OOB_Num">Case sensitive. Please enter the exact OOB number. e.g. E1234567C</label>
-          </div>
-          <div>
-            <label id="file-error" class="error" for="OOB_Num"></label>
+          <div class='form-group'>
+            <label for="OOB_Num">OOB Registration Number<br>
+            <img src="https://i.imgur.com/90eAIuW.jpg"></label>
+            <input id="OOB_Num" type="text" class="form-control" name="OOB_Num" aria-describedby="OOB_Num_HelpText">
+            <small id="OOB_Num_HelpText">Case sensitive. Please enter the exact OOB number. e.g. E1234567C</small>
+            <div class="invalid-feedback">Input Required</div>
           </div>
         </div>
       </div>
