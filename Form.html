@@ -45,16 +45,19 @@
     <div class='mt-2 col'>
         <form id="myForm" novalidate>
           <!-- Welcome Text-->
-          <div class="card">
+          <div class="card bg-info text-white">
             <div class="card-body">
               <h3>VCPS FB Group Verification</h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
               <h6>Hi,
                 <br><br>Thanks for your application to join the Vision Care Professionals Singapore (VCPS) FB Group.
                 <br><br>We are the largest vision care professional interest group in Singapore.
                 <br><br>VCPS is <strong>ONLY</strong> for members of the visioncare community. Hence, we do not allow members of the public to join as it is common for content on social media be taken out of context resulting in bad repute.
                 <br><br>All applicants need to be verified before application is approved as this group is <strong>ONLY</strong> open to Members of the Singapore Vision Care Industry and its counterparts.
                 <br><br>Kindly complete the form below for verification please.
-                <br><br>
               </h6>
             </div>
           </div>
@@ -122,50 +125,66 @@
         <!--Upload Verification Docu-->
         <div class="card VCPS" style='display:none;'>
           <div class="card-body">
-            <h5>Upload Verification Selfie</h5>
-            <img style="width: 300px;"src="https://i.imgur.com/QkReyTh.jpg">
-            <h6>
-              <span class="docu_text" style='display:none;'>Please upload a <strong>Selfie</strong> of you holding your</span>
-              <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert(Pink/Green Card)</strong></span>
-              <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card (NOT 11B)</strong></span>
-              <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span>
-              <span class="docu_text" style='display:none;'> and ensure that the following details in your
-              <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert</strong></span>
-              <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card</strong></span>
-              <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span> are clear and readable.
-              <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'>
-                <li>Name</li>
-                <li>ID Picture</li>
-                <li>Registration Number</li>
-              </span>
-              <span class="docutype docu_stdcard" id="docu_stdcard" style='display:none;'>
-                <li>Name</li>
-                <li>ID Picture</li>
-                <li>Course</li>
-              </span>
-              <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'>
-                <li>Name</li>
-                <li>Company Name/LOGO</li>
-                <li>Designation/Position</li>
-                <li>Contact Number/Email</li>
-              </span>
-              <br>Please check your picture before sending. <br>Unreadable(too small)/inverted/mirrored text WILL be immediately rejected
-              <br>In the event that you do not have the required document. Kindly contact the Administrator(Details at the bottom).</span>
-            </h6>
+            <div class="row">
+              <div class="col">
+              <h5>Upload Verification Selfie</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs col-md-6">
+              <img class="" style="width: 300px; height: auto;" src="https://i.imgur.com/QkReyTh.jpg">
+              </div>
+              <div class="col-xs col-md-6">
+              <h6>
+                <span class="docu_text" style='display:none;'>Please upload a <strong>Selfie</strong> of you holding your</span>
+                <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert(Pink/Green Card)</strong></span>
+                <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card (NOT 11B)</strong></span>
+                <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span>
+                <span class="docu_text" style='display:none;'> and ensure that the following details in your
+                <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'><strong>Practicing Cert</strong></span>
+                <span class="docutype docu_stdcard" id="docu_stdcard"  style='display:none;'><strong>Student Card</strong></span>
+                <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'><strong>Name Card</strong></span> are clear and readable.
+                <span class="docutype docu_praccert" id="docu_praccert" style='display:none;'>
+                  <li>Name</li>
+                  <li>ID Picture</li>
+                  <li>Registration Number</li>
+                </span>
+                <span class="docutype docu_stdcard" id="docu_stdcard" style='display:none;'>
+                  <li>Name</li>
+                  <li>ID Picture</li>
+                  <li>Course</li>
+                </span>
+                <span class="docutype docu_namecard" id="docu_namecard" style='display:none;'>
+                  <li>Name</li>
+                  <li>Company Name/LOGO</li>
+                  <li>Designation/Position</li>
+                  <li>Contact Number/Email</li>
+                </span>
+                <br>Please check your picture before sending. <br>Unreadable(too small)/inverted/mirrored text WILL be immediately rejected
+                <br>In the event that you do not have the required document. Kindly contact the Administrator(Details at the bottom).</span>
+              </h6>
+              </div>
+            </div>
             <form action="#" novalidate>
-              <div class="input-group">
-                <div class="custom-file">
-                  <input name="docu" id="docu" type="file" class="custom-file-input">
-                  <label class="custom-file-label" for="docu" style="overflow: hidden;">Select a file</label>
-                  <label id="docu-error" class="error" for="docu" style="">Input Required</label>
+            <div class="row input-group">
+              <div class="col">
+              	<div class="custom-file">
+              		<input name="docu" id="docu" type="file" class="custom-file-input error">
+              		<label class="custom-file-label" for="docu" style="overflow: hidden;">Select a file</label>
                 </div>
               </div>
+            </div>
+            <div class="row">
+              <div class="col">
+              <label id="docu-error" class="error" for="docu" style="">Please select your file</label>
+              </div>
+            </div>
             </form>
           </div>
         </div>
         <div class="card VCPS" style='display:none;'>
           <div class="card-body">
-            <div class="input-field">
+            <div class="input-field text-center">
               <button id="submitBtn" type="button" class="btn btn-info btn-block" value="submit" onclick="fileUploadJs()" disabled>SUBMIT</button>
                 <span id="status" style="display: none">
                   <!-- div will be filled with innerHTML after form submission. -->
@@ -174,11 +193,10 @@
               </div>
             </div>
             </form>
-            <br>
             <!--Contact Admin-->
-            <div class="card" style='display:block;'>
+            <div class="mt-2 card" style='display:block;'>
               <div class="card-body">
-                <br><h5>Having a Hard Time? Contact The VCPS Community Manager!</h5><h6>Please feel free to contact <a id="mickaelng" href="https://www.facebook.com/ordico">Mickael Ng</a> via FB Messenger! :) </h6>
+                <h5>Having a Hard Time With this Form?<br>Contact The VCPS Community Manager!</h5><h6>Please feel free to contact <a id="mickaelng" href="https://www.facebook.com/ordico">Mickael Ng</a> via FB Messenger! :) </h6>
               </div>
             </div>
             <div class="row justify-content-around">
@@ -199,7 +217,6 @@
           </div>
     </div>
     </div>
-  </div>
 
     <!-- Add the jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -356,7 +373,7 @@
     function updateOutput() {
       var outputDiv = document.getElementById('status');
       outputDiv.innerHTML = "File was UPLOADED!";
-      $("#submitBtn").html('<i class="material-icons left">backup</i>file upload success!');
+      $("#submitBtn").html('<i class="fas fa-cloud-upload-alt"></i> File Upload Success!');
     };
 
     function showError(e) {
